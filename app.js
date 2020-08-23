@@ -7,4 +7,12 @@ const puppeteer = require('puppeteer');
 
     await page.goto('https://account-d.docusign.com/')
 
+    await page.type('#username', 'TYPEYOURUSERNAME@EMAIL.COM')
+    await page.click('.btn.btn-main.btn-lg')
+  
+    await page.waitForNavigation()
+  
+    await page.type('#password', 'TYPEYOURPASSWORD')
+    await page.click('.btn.btn-main.btn-lg')
+
 }) ()
