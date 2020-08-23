@@ -32,7 +32,9 @@ async function sign(page) {
   }
   return
 };
-
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
 (async () => {
   const browser = await puppeteer.launch({headless: false})
   const page = await browser.newPage()
