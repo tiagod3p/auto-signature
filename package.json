@@ -5,5 +5,8 @@
   "license": "MIT",
   "devDependencies": {
     "git-commit-msg-linter": "^2.4.4"
+  },
+  "dependencies": {
+    "puppeteer": "^5.2.1"
   }
 }
