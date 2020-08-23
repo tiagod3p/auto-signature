@@ -15,6 +15,7 @@ async function sign(page) {
     const elHandleArray = await page.$$('.page-tabs button.tab-button')
     for (const el of elHandleArray) {
       try {
+        await sleep(5000)
         await el.hover()
         await el.click()
       } catch(e) {
@@ -22,11 +23,14 @@ async function sign(page) {
       }
     }
 
+    await sleep(5000)
     await page.click('.btn-done-signing')
-  
+    
+    await sleep(5000)
     await page.goto('https://appdemo.docusign.com/documents?label=action-required')
 
-    console.log("Finish signing document...")
+    await sleep(10000)
+    console.log("Finished signing document...")
 
     await sign(page)
   }
@@ -61,6 +65,6 @@ function sleep(ms) {
     console.error(err)
     browser.close()
   }
-
+  sleep(5000)
   browser.close()
 }) ()
