@@ -41,7 +41,7 @@ function sleep(ms) {
 };
 (async () => {
   try {
-    const browser = await puppeteer.launch({headless: false})
+    const browser = await puppeteer.launch({headless: true})
     const page = await browser.newPage()
     await page.setViewport({ width: 1500, height: 768});
   
