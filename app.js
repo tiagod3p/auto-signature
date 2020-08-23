@@ -5,4 +5,6 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage()
     await page.setViewport({ width: 1500, height: 768});
 
+    await page.goto('https://account-d.docusign.com/')
+
 }) ()
